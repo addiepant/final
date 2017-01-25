@@ -33,6 +33,9 @@ namespace keyPressAnimations
         int xDoor4;
         int yDoor4;
 
+        //
+
+
         int p1x = 0;
         int p1y = 3;
         int p2x = 0;
