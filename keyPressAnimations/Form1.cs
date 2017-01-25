@@ -259,7 +259,8 @@ namespace keyPressAnimations
                     this.backImage = (Properties.Resources.losr);
                 }
             }
-            Refresh();
+
+           Refresh();
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
