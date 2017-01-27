@@ -20,10 +20,11 @@ namespace keyPressAnimations
         //initial starting values for Hero character
         int xHero = 100;
         int yHero =  100;
-        int speedHero = 2;
+        int speedHero = 4;
         int widthHero = 147;
         int heightHero = 150;
 
+        //values for door
         int xDoor1;
         int yDoor1;
         int xDoor2;
@@ -32,18 +33,6 @@ namespace keyPressAnimations
         int yDoor3;
         int xDoor4;
         int yDoor4;
-
-        //
-
-
-        int p1x = 0;
-        int p1y = 3;
-        int p2x = 0;
-        int p2y = 3;
-        int p3x = 5;
-        int p3y = 0;
-        int p4x = 0;
-        int p4y = 0;
         int door1Width = 110;
         int door1Height = 100;
         int door2Width = 100;
@@ -52,18 +41,30 @@ namespace keyPressAnimations
         int door3Height = 100;
         int door4Width = 110;
         int door4Height = 100;
-        
 
-        //determines whether a key is being pressed or not - DO NOT CHANGE
+        //values for products
+        int p1x = 3;
+        int p1y = 3;
+        int p2x = 3;
+        int p2y = 3;
+        int p3x = 5;
+        int p3y = 0;
+        int p4x = 0;
+        int p4y = 0;
+
+        //set up sound
+        SoundPlayer player = new SoundPlayer(Properties.Resources.tada);
+        SoundPlayer audio = new SoundPlayer(Properties.Resources.buzzer);
+
+        //determines whether a key is being pressed or not
         Boolean leftArrowDown, downArrowDown, rightArrowDown, upArrowDown;
 
         //create graphic objects
         SolidBrush drawBrush = new SolidBrush(Color.LightCoral);
-
         Image backImage;
-        
         Graphics g ;
-
+        Font drawFont = new Font("Arial", 16, FontStyle.Bold);
+        SolidBrush fontBrush = new SolidBrush(Color.AntiqueWhite);
         public Form1()
         {
             InitializeComponent();
@@ -75,10 +76,12 @@ namespace keyPressAnimations
             xHero = this.Width /2 - 30;
             yHero = this.Height /2 - 28;
 
-            int p2x = this.Width - 100;
-            int p3y = this.Height - 100;
-            int p4x = this.Width - 100;
-            int p4y = this.Height - 100;
+
+            p2x = this.Width - 110;
+            p3y = this.Height - 110;
+            p4x = this.Width - 110;
+            p4y = this.Height - 110;
+
             xDoor1 = this.Width - 100;
             yDoor1 = this.Height / 2;
             xDoor2 = 0;
@@ -195,8 +198,9 @@ namespace keyPressAnimations
             {
                 yHero = yHero - speedHero;
             }
+            
             //refresh the screen, which causes the Form1_Paint method to run
-
+            #region set rectangles 
             Rectangle beyonceRec = new Rectangle(xHero, yHero, widthHero, heightHero);
             Rectangle doorRec1 = new Rectangle(xDoor1, yDoor1, door1Width, door1Height);
             Rectangle doorRec2 = new Rectangle(xDoor2, yDoor2, door2Width, door2Height);
@@ -206,7 +210,9 @@ namespace keyPressAnimations
             Rectangle pRec2 = new Rectangle(p2x, p2y, door1Width, door1Height);
             Rectangle pRec3 = new Rectangle(p3x, p3y, door1Width, door1Height);
             Rectangle pRec4 = new Rectangle(p4x, p4y, door1Width, door1Height);
+            #endregion
 
+            #region What will happen if beyonce intersects with an object
             if (scene == 1)
             {
                 if (beyonceRec.IntersectsWith(doorRec1))
@@ -241,34 +247,125 @@ namespace keyPressAnimations
                     this.BackgroundImage = (Properties.Resources.TARTE__);
                     //set variable, add, case 
                 }
-                
+            }
+
+            if (scene == 2)
+
+            {
                 if (beyonceRec.IntersectsWith(pRec1))
                 {
-                  this.backImage = (Properties.Resources.winner);
+                    player.Play();
+                    this.BackgroundImage = (Properties.Resources.winner);
                 }
 
                 if (beyonceRec.IntersectsWith(pRec2))
                 {
-                    this.backImage = (Properties.Resources.losr);
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
                 }
 
                 if (beyonceRec.IntersectsWith(pRec3))
                 {
-                    this.backImage = (Properties.Resources.losr);
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
                 }
 
                 if (beyonceRec.IntersectsWith(pRec4))
                 {
-                    this.backImage = (Properties.Resources.losr);
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
                 }
             }
 
-           Refresh();
+
+            if (scene == 3)
+            {
+                if (beyonceRec.IntersectsWith(pRec1))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec2))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec3))
+                {
+                    player.Play();
+                    this.BackgroundImage = (Properties.Resources.winner);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec4))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+            }
+
+            if (scene == 4)
+            {
+                if (beyonceRec.IntersectsWith(pRec1))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec2))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec3))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec4))
+                {
+                    player.Play();
+                    this.BackgroundImage = (Properties.Resources.winner);
+                }
+            }
+
+            if (scene == 5)
+            {
+                if (beyonceRec.IntersectsWith(pRec1))
+                {
+                    player.Play();
+                    this.BackgroundImage = (Properties.Resources.winner);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec2))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec3))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+
+                if (beyonceRec.IntersectsWith(pRec4))
+                {
+                    audio.Play();
+                    this.BackgroundImage = (Properties.Resources.losr);
+                }
+            }
+
+            Refresh();
         }
+        #endregion
+
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             //draw rectangle to screen
-           // e.Graphics.DrawImage(backImage, 0, 0);
             if (scene == 1)
             {
                 e.Graphics.FillRectangle(drawBrush, xDoor1, yDoor1, door1Width, door1Height);
@@ -276,6 +373,7 @@ namespace keyPressAnimations
                 e.Graphics.FillRectangle(drawBrush, xDoor3, yDoor3, door3Width, door3Height);
                 e.Graphics.FillRectangle(drawBrush, xDoor4, yDoor4, door4Width, door4Height);
             }
+            //draw products to screen if scene = 2,3,4,5
             if (scene == 2)
             {
                 e.Graphics.DrawImage(Properties.Resources.TF1, p1x, p1y, door1Width, door1Height);
@@ -298,14 +396,16 @@ namespace keyPressAnimations
                 e.Graphics.DrawImage(Properties.Resources.A3, p3x, p3y, door1Width, door1Height);
                 e.Graphics.DrawImage(Properties.Resources.A4, p4x, p4y, door1Width, door1Height);
             }
+
             if (scene == 5)
             {
                 e.Graphics.DrawImage(Properties.Resources.T1, p1x, p1y, door1Width, door1Height);
                 e.Graphics.DrawImage(Properties.Resources.T2, p2x, p2y, door1Width, door1Height);
-                e.Graphics.DrawImage(Properties.Resources.T3, p3x, p3y, door1Width, door1Height);
+                e.Graphics.DrawImage(Properties.Resources.T3, p3x , p3y, door1Width, door1Height);
                 e.Graphics.DrawImage(Properties.Resources.T4, p4x, p4y, door1Width, door1Height);
             }
             
+            //draw beyonce
             e.Graphics.DrawImage(Properties.Resources.Beyonce, xHero, yHero, widthHero, heightHero);
         }
     }       

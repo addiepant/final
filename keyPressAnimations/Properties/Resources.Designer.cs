@@ -131,6 +131,15 @@ namespace keyPressAnimations.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream buzzer {
+            get {
+                return ResourceManager.GetStream("buzzer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap losr {
@@ -177,6 +186,15 @@ namespace keyPressAnimations.Properties {
             get {
                 object obj = ResourceManager.GetObject("T4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream tada {
+            get {
+                return ResourceManager.GetStream("tada", resourceCulture);
             }
         }
         

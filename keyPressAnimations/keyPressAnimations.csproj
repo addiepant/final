@@ -158,6 +158,12 @@
   <ItemGroup>
     <None Include="Resources\losr.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buzzer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tada.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
