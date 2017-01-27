@@ -211,7 +211,7 @@ namespace keyPressAnimations
             Rectangle pRec3 = new Rectangle(p3x, p3y, door1Width, door1Height);
             Rectangle pRec4 = new Rectangle(p4x, p4y, door1Width, door1Height);
             #endregion
-
+             
             #region What will happen if beyonce intersects with an object
             if (scene == 1)
             {
