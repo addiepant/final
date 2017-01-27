@@ -254,26 +254,43 @@ namespace keyPressAnimations
             {
                 if (beyonceRec.IntersectsWith(pRec1))
                 {
-                    player.Play();
+                    
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.winner);
+                    Refresh();
+                    player.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec2))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec3))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec4))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
             }
 
@@ -282,26 +299,42 @@ namespace keyPressAnimations
             {
                 if (beyonceRec.IntersectsWith(pRec1))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec2))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec3))
                 {
-                    player.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.winner);
+                    Refresh();
+                    player.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec4))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
             }
 
@@ -309,26 +342,42 @@ namespace keyPressAnimations
             {
                 if (beyonceRec.IntersectsWith(pRec1))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec2))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec3))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec4))
                 {
-                    player.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.winner);
+                    Refresh();
+                    player.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
             }
 
@@ -336,26 +385,42 @@ namespace keyPressAnimations
             {
                 if (beyonceRec.IntersectsWith(pRec1))
                 {
-                    player.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.winner);
+                    Refresh();
+                    player.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec2))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec3))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
 
                 if (beyonceRec.IntersectsWith(pRec4))
                 {
-                    audio.Play();
+                    gameTimer.Enabled = false;
                     this.BackgroundImage = (Properties.Resources.losr);
+                    Refresh();
+                    audio.Play();
+                    Thread.Sleep(2000);
+                    Close();
                 }
             }
 
